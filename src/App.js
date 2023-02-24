@@ -12,8 +12,10 @@ function App() {
   const [odlawFound, setOdlawFound] = useState(false);
   const [wifiFound, setWifiFound] = useState(false);
   const [cardinalFound, setCardinalFound] = useState(false);
+  const [update, setUpdate] = useState(false);
 
   function setCharTrue(character){
+    setUpdate(true);
     switch(character) {
       case "odlaw":
         setOdlawFound(true);
@@ -45,7 +47,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header time={time} status={[odlawFound, wifiFound, cardinalFound]}/>
+      <Header time={time} update={[update, setUpdate]} status={[odlawFound, wifiFound, cardinalFound]}/>
       <Body setCharTrue={setCharTrue}/>
       {!showIntro && 
         <Intro startTime={startTimer} hideIntro={setShowIntro} />
