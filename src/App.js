@@ -14,6 +14,16 @@ function App() {
   const [cardinalFound, setCardinalFound] = useState(false);
   const [update, setUpdate] = useState(false);
 
+  useEffect(()=> {
+    if(odlawFound === true && 
+        wifiFound === true && 
+        cardinalFound === true)
+    {
+      alert(`You won in ${time} seconds!`);
+      setStartTime(false);
+    }
+  }, [odlawFound, wifiFound, cardinalFound, time]);
+
   function setCharTrue(character){
     setUpdate(true);
     switch(character) {
