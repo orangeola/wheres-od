@@ -1,4 +1,17 @@
 .Header {
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
+}
+
+.chars {
+    display: flex;
+    gap: 30px;
+}
+
+.notFound {
+    color: darkred;
+}
+
+.found {
+    color: green;
 }

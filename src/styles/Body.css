@@ -9,3 +9,8 @@
     display: flex;
     justify-content: center;
 }
+
+.Body img {
+  max-width: 100%;
+  min-width: 100%;
+}
