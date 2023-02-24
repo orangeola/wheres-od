@@ -1,0 +1,25 @@
+.Intro {
+    position: fixed;
+    top:50%;
+    left:50%;
+    display: flex;
+    background-color: azure;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+}
+
+.Objects {
+    display:flex;
+    flex-direction: row;
+}
+
+.Instructions {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
+
+.Instructions button {
+    align-self:center
+}

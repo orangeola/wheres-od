@@ -1,20 +1,35 @@
 import Header from "./components/Header"
 import Body from "./components/Body"
+import "./styles/App.css"
+import React, { useEffect, useState } from 'react';
 import Intro from "./components/Intro"
-import React, { useState } from 'react';
 
 function App() {
-  const [introOn, setIntroOn] = useState(true);
+  const [time, setTime] = useState(0);
+  const [startTime, setStartTime] = useState(false);
+  const [showIntro, setShowIntro] = useState(false);
 
-  const turnOffIntro = () => {
-    setIntroOn(false);
+  function startTimer(){
+    setStartTime(!startTime);
   }
+
+  useEffect(()=> {
+    if(startTime){
+      let timer = setInterval(() => {
+        setTime(time+1);
+      }, 1000);
+      return () => clearInterval(timer);
+    }
+  }, [time, startTime]);
+
 
   return (
     <div className="App">
-      {introOn ? <Intro switch={turnOffIntro} /> : null}
-      <Header />
+      <Header time={time} />
       <Body />
+      {!showIntro && 
+        <Intro startTime={startTimer} hideIntro={setShowIntro} />
+      }
     </div>
   );
 }
