@@ -9,6 +9,7 @@ function Intro(props) {
   const startGame = ()=> {
     props.startTime();
     props.hideIntro(true);
+    props.showImg(true);
   }
 
   return (

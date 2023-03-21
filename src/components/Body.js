@@ -6,6 +6,11 @@ import {db, app} from "../firebase/config"
 
 function Body(props) {
 
+  if(props.imgZ){
+    let img = document.getElementById("wallyImg");
+    img.style.setProperty('z-index', 0);
+  }
+
   async function coords(event){
     let bounds = event.target.getBoundingClientRect();
     let x = event.clientX - bounds.left;
@@ -38,7 +43,7 @@ function Body(props) {
 
   return (
     <div className="Body">
-      <img src={wallyImg} alt="Crowded school" onClick={coords}></img>
+      <img id="wallyImg" src={wallyImg} alt="Crowded school" onClick={coords}></img>
     </div>
   );
 }

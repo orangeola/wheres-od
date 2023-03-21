@@ -14,6 +14,8 @@ function App() {
   const [cardinalFound, setCardinalFound] = useState(false);
   const [update, setUpdate] = useState(false);
 
+  const [zindex, setZindex] = useState(false);
+
   useEffect(()=> {
     if(odlawFound === true && 
         wifiFound === true && 
@@ -58,9 +60,9 @@ function App() {
   return (
     <div className="App">
       <Header time={time} update={[update, setUpdate]} status={[odlawFound, wifiFound, cardinalFound]}/>
-      <Body setCharTrue={setCharTrue}/>
+      <Body setCharTrue={setCharTrue} imgZ={zindex}/>
       {!showIntro && 
-        <Intro startTime={startTimer} hideIntro={setShowIntro} />
+        <Intro startTime={startTimer} hideIntro={setShowIntro} showImg={setZindex} />
       }
     </div>
   );

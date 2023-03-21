@@ -7,10 +7,11 @@
 
 .Body {
     display: flex;
-    justify-content: center;
+    background-color: black;
 }
 
 .Body img {
   width: 1455px;
   height: 957px;
+  z-index: -1;
 }
