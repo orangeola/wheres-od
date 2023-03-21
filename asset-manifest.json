@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/wheres-od/static/css/main.8936ac98.css",
-    "main.js": "/wheres-od/static/js/main.ae01c18e.js",
+    "main.js": "/wheres-od/static/js/main.ac3a503c.js",
     "static/media/schoolwally.jpg": "/wheres-od/static/media/schoolwally.6bc2715ec58fff3c4842.jpg",
     "static/media/cardinal.png": "/wheres-od/static/media/cardinal.ee368cc48cf3a7c2dd4f.png",
     "static/media/odlaw.jpg": "/wheres-od/static/media/odlaw.f80dd51a1916fbe84b1f.jpg",
     "index.html": "/wheres-od/index.html",
     "main.8936ac98.css.map": "/wheres-od/static/css/main.8936ac98.css.map",
-    "main.ae01c18e.js.map": "/wheres-od/static/js/main.ae01c18e.js.map"
+    "main.ac3a503c.js.map": "/wheres-od/static/js/main.ac3a503c.js.map"
   },
   "entrypoints": [
     "static/css/main.8936ac98.css",
-    "static/js/main.ae01c18e.js"
+    "static/js/main.ac3a503c.js"
   ]
 }
