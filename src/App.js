@@ -16,12 +16,15 @@ function App() {
 
   const [zindex, setZindex] = useState(false);
 
+  const [timer, setTimer] = useState(null);
+
   useEffect(()=> {
     if(odlawFound === true && 
         wifiFound === true && 
         cardinalFound === true)
     {
       alert(`You won in ${time} seconds!`);
+      clearTimeout(timer);
       setStartTime(false);
     }
   }, [odlawFound, wifiFound, cardinalFound, time]);
@@ -46,13 +49,12 @@ function App() {
   function startTimer(){
     setStartTime(!startTime);
   }
-
+  
   useEffect(()=> {
     if(startTime){
-      let timer = setInterval(() => {
+      setTimer(setTimeout(() => {
         setTime(time+1);
-      }, 1000);
-      return () => clearInterval(timer);
+      }, 1000));
     }
   }, [time, startTime]);
 
